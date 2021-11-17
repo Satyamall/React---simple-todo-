@@ -1,0 +1,94 @@
+
+.todo{
+    width: 65%;
+    border: 1px solid red;
+    background-color: brown;
+    text-align: center;
+    margin-top: 60px;
+    padding-bottom: 150px;
+}
+
+.todo h1{
+    color: rgb(82, 70, 3);
+}
+
+.todoItem{
+    margin-top: 40px;
+}
+
+.todoItem h3{
+    font-size: 20px;
+    color: silver;
+
+}
+
+.todoItem input{
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.todoItem button{
+    padding: 8px 15px;
+    font-size: 25px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.list{
+    margin-top: 30px;
+}
+
+.id{
+    font-size: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px 5px;
+    background-color: black;
+    color: white;
+    margin-right: 10px;
+}
+.title{
+    font-size: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px 5px;
+    background-color: rgb(92, 5, 92);
+    color: white;
+    margin-right: 10px;
+}
+.status{
+    font-size: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px 5px;
+    background-color: rgb(45, 1, 87);
+    color: white;
+    margin-right: 10px;
+}
+
+.delete{
+    font-size: 23px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px 5px;
+    background-color: rgb(214, 192, 192);
+    color: white;
+    margin-right: 10px;
+}
+.toggle{
+    font-size: 23px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px 5px;
+    background-color: red;
+    color: white;
+    margin-right: 10px;
+}
+
+.delete:hover{
+    background-color: black;
+}
+
+.toggle:hover{
+    background-color: orange;
+}
