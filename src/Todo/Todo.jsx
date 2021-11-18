@@ -10,7 +10,7 @@ export default function Todo(){
         {
             id: 1,
             title: "DEFAULT",
-            status: "Incompleted",
+            status: false,
         }
     ])
     
@@ -18,20 +18,20 @@ export default function Todo(){
         const payload={
             id: todos.length+1,
             title: title,
-            status: "Incompleted"
+            status: false
         }
         setTodos([...todos,payload]);
     }
 
     // delete
-    const handleDelete = (id)=>{
-        setTodos(todos.filter((item)=>item.id !==id));
-    }
+    // const handleDelete = (id)=>{
+    //     setTodos(todos.filter((item)=>item.id !==id));
+    // }
 
     // * toggle
     const handleToggle=(id)=>{
         const updatedTodos = todos.map((item)=>
-        item.id===id ? {...item, status: (item.status==="Completed")?("Incompleted"):"Completed"}: item
+        item.id===id ? {...item, status: !item.status}: item
         );
         setTodos(updatedTodos);
     }
@@ -39,21 +39,21 @@ export default function Todo(){
     return (
         <div className={style.todo}>
             <h1>TODO LIST</h1>
-            <TodoInput onTaskCreate={handleTaskCreate}/>
+            <h3>Add Your Tasks Below</h3>
             {
-                 todos.map((todo)=>{
+                todos.map((todo)=>{
                     return (
                 <TodoList
                 key={todo.id} 
                 id={todo.id}
                 title={todo.title} 
                 status={todo.status}
-                handleDelete={handleDelete}
                 handleToggle={handleToggle}
                 />
                 );
                 })
             }
+            <TodoInput onTaskCreate={handleTaskCreate}/>
         </div>
     )
 }

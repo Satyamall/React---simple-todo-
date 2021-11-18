@@ -15,7 +15,6 @@ function TodoInput({onTaskCreate}){
     }
     return (
         <div className={style.todoItem}>
-            <h3>Add Your Tasks Below</h3>
             <input type="text"
              placeholder="Write Something"
              value={text}
